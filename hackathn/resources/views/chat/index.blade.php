@@ -4,7 +4,7 @@
 
 
 <div style="padding:1em;" class="content d-flex flex-row justify-content-center alig-items-center">
-  <div style="width: 80%;" class="card ">
+  <div  class="card chat-card">
     <div class="card-header">
     <h4 class="card-title ">Chat Grupal</h4>
     </div>

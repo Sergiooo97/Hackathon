@@ -34,7 +34,7 @@
 
 
 
-      <div style="margin-left: 3em;;" class="content">
+      <div class="content info-alumno-container">
         <div class="row">
           <div class="col-md-4">
             <div class="card card-user">
@@ -47,7 +47,7 @@
                  <a class="avatar2" data-toggle="modal" data-target="#exampleModal">
               
                  
-                  <img id="avatar" class="avatar border-gray " src="<?php echo  asset('storage/imagenes/')?>/<?php echo auth()->user()->avatar?>" alt="...">
+                  <img id="avatar" class="avatar border-gray " src="<?php echo asset('/uploads/imagenes')?>/<?php echo auth()->user()->avatar?>" alt="...">
 
                 
                    
@@ -110,7 +110,7 @@
                       <div class="col-md-2 col-2 d-flex flex-row justify-content-center alig-items-center">
                         
                      <div class="avatar ">
-                     <img  src="<?php echo  asset('storage/imagenes/')?>/<?php echo $user->avatar?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                     <img  src="<?php echo  asset('/uploads/imagenes')?>/<?php echo $user->avatar?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                     
                         </div>
                      

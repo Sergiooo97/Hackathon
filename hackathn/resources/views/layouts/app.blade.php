@@ -29,14 +29,53 @@
     <link href="{{ asset('demo/demo.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/chat-list.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles-hackathn-layout.css') }}" rel="stylesheet">
 
 
    <!-- Scripts -->   
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="{{ asset('js/app.js') }}" ></script>
-   
+
 
   <style>
+    .idea-card{
+      width: 90%; 
+      height:80%;
+    }
+    .info-alumno-container{
+      margin-left:3em;
+    }
+    .proyecto-container{
+      margin-left: 6em;
+    }
+    .chat-card{
+      width: 80%;
+    }
+@media screen and (max-width: 700px) {
+  .chat-card{
+      width: 100%;
+    }
+    .proyecto-container{
+      margin-left: 0em;
+    }
+    .info-alumno-container{
+      margin-left:0em;
+    }
+    .idea-card{
+      width: 100%; 
+      height:100%;
+    }
+
+    .tituloIdea{
+      margin-bottom:10px;
+      height: 2em;
+    }
+    .enviar-idea{
+      margin-left: 3.8em;
+    }
+
+}
+
 
 /*Ejemplo 1*/
 .avatar2 img {
@@ -290,6 +329,10 @@ body{
   background-attachment: fixed;
 }
 
+
+
+
+
    </style>
       
       <livewire:styles>
@@ -366,48 +409,13 @@ body{
                     <span class="navbar-toggler-bar bar3"></span>
                   </button>
                 </div>
-                <a class="navbar-brand" href="#pablo">Hackathon</a>
+                <a class="navbar-brand" href="#pablo"> 
+                  Hackathon 2020
+               </a>
                 <a href="{{ url('/logout') }}"> cerrar sesión </a>
               </div>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-bar navbar-kebab"></span>
-                <span class="navbar-toggler-bar navbar-kebab"></span>
-                <span class="navbar-toggler-bar navbar-kebab"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navigation">
-               
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link btn-magnify" href="#pablo">
-                      <i class="nc-icon nc-layout-11"></i>
-                      <p>
-                        <span class="d-lg-none d-md-block">Stats</span>
-                      </p>
-                    </a>
-                  </li>
-                  <li class="nav-item btn-rotate dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="nc-icon nc-bell-55"></i>
-                      <p>
-                        <span class="d-lg-none d-md-block">Some Actions</span>
-                      </p>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn-rotate" href="#pablo">
-                      <i class="nc-icon nc-settings-gear-65"></i>
-                      <p>
-                        <span class="d-lg-none d-md-block">Account</span>
-                      </p>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+             
+             
             </div>
           </nav>
           <!-- End Navbar -->
@@ -420,6 +428,8 @@ body{
 
     </div> -->
  @yield('content')
+ <script src="{{asset('js/paper-dashboard.min.js?v=2.0.0')}}" type="text/javascript"></script>
  
+
 </body>
 </html>

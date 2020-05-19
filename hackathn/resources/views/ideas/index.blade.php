@@ -5,7 +5,7 @@
 <div style="padding:1em;" class="content d-flex flex-row justify-content-center alig-items-center">
     <div class="row">
       <div class="col-lg-12 col-md-21 col-sm-12 ">
-        <div style="width: 90%; height:80%;" class="card card-stats">
+        <div  class="card card-stats idea-card">
           <div  class="card-body scroll  ">
             <div style="padding:1em;" class="row card_01 d-flex flex-row justify-content-center alig-items-center">
 
@@ -29,14 +29,14 @@
                   <form method="POST" action="{{route('ideas.store')}}">
                     @csrf
                     <label style="font-size: 20px;" for="tituloIdea">Titulo</label>
-                    <input name="tituloIdea" id="tituloIdea" style="height: 3em;" class="input-proyecto" type="text" required/>
+                    <input name="tituloIdea" id="tituloIdea" style="height: 3em;" class="input-proyecto tituloIdea" type="text" required maxlength="20"/>
                   </div>
                   <div class="col-sm">
-                    <textarea class=" input-proyecto" name="descripcion" id="descripcion" rows="3" placeholder=" Escribe tu idea para tu equipo.." required></textarea>
+                    <textarea class=" input-proyecto" name="descripcion" id="descripcion" rows="3" placeholder=" Escribe tu idea para tu equipo.." required maxlength="250"></textarea>
 
                   </div>
                   <div class="col-sm-3">
-                   <button class="button-hackathn" type="submit">Enviar</button>
+                   <button class="button-hackathn enviar-idea" type="submit">Enviar</button>
                   </div>
                 </form>
                 </div>

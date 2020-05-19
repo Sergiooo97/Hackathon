@@ -7,7 +7,7 @@
 <h1>el usuaruo es {{$users->id}}</h1>
 
 
-<div style="margin-left: 3em;;" class="content">
+<div class="content info-alumno-container">
     <div class="row">
       <div class="col-md-4">
         <div class="card card-user">
@@ -20,7 +20,7 @@
              <a class="avatar2" data-toggle="modal" data-target="#exampleModal">
           
              
-              <img id="avatar" class="avatar border-gray " src="<?php echo  asset('storage/imagenes/')?>/<?php echo $users->avatar ?>" alt="...">
+              <img id="avatar" class="avatar border-gray " src="<?php echo  asset('/uploads/imagenes')?>/<?php echo $users->avatar ?>" alt="...">
 
             
                

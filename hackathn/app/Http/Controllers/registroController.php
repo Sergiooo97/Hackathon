@@ -41,6 +41,7 @@ class registroController extends Controller
      */
     public function store(Request $request)
     {
+ try {
         if($avatar = User::setAvatar($request->avatar))
         $request->request->add(['avatar'=>$avatar]);
 
@@ -59,7 +60,10 @@ class registroController extends Controller
         $users ->password = Hash::make($request->input('password'));
         $users->avatar= $avatar;
         $users->save();
-        return redirect()->route('home');
+             //redirigimos a usuarios              
+      } catch (\Illuminate\Database\QueryException $e) {
+                return view('errors.23000');
+      }   
 
     }
 

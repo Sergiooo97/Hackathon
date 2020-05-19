@@ -93,7 +93,11 @@ class alumnoController extends Controller
      */
     public function show($id)
     {
-
+        $user = User::find($id);
+        if ($user==null){
+ 
+         return view('errors.404');
+        }else{
        
        $users = User::find($id)
         or $userss = DB::table('chats')
@@ -102,7 +106,7 @@ class alumnoController extends Controller
         ->WhereNotIn("id", [auth()->user()->id])
         ->get();
         return view('infoAlumno.show', compact('users'));
-
+       }
     }
 
     /**

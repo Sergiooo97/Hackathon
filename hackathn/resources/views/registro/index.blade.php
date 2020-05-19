@@ -20,7 +20,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link href="{{ asset('registroAssets/css/demo.css')}}" rel="stylesheet" />
-
+    <script src="{{asset('/js/validar-password.js')}}" type="text/javascript"></script>
     <style>
         .card {
   background:rgba(2, 35, 54, 0.965);
@@ -157,7 +157,7 @@ input {
                     <div style="padding:1em; " class="wizard-container">
         
                         <div class="card wizard-card " data-color="blue" id="wizardProfile">
-                            <form method="POST" action="{{ route('registro.store') }}"  enctype="multipart/form-data">
+                            <form name="mi_formulario" action="{{ route('registro.store') }}" method="POST"   enctype="multipart/form-data"  onSubmit="return validar_clave()">
                         <!--        You can switch ' data-color="orange" '  with one of the next bright colors: "blue", "green", "orange", "red"          -->
                         @csrf
                                 <div  class="wizard-header text-white">
@@ -203,9 +203,23 @@ input {
                                                   <label>Correo <small>(obligatorio)</small></label>
                                                   <input name="email" type="email" class="input100" placeholder="andrew@creative-tim.com">
                                               </div>
+                                              <script>
+
+                                                function soloNumeros(e)
+        
+                                                    {
+        
+                                                        var key = window.Event ? e.which : e.keyCode
+        
+                                                        return ((key >= 48 && key <= 57) || (key==8))
+        
+                                                    }
+            
+                                                </script>
+
                                               <div class="form-group">
                                                 <label>Matricula <small>(obligatorio)</small></label>
-                                                <input name="matricula" type="text" class="input100" placeholder="160700..">
+                                                <input  onKeyPress="return soloNumeros(event)"  name="matricula" type="text" class="input100" placeholder="160700..">
                                             </div>
                                           </div>
                                       </div>

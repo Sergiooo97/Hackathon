@@ -21,7 +21,7 @@
                     <div class="notificationss bounceInDown">
 
 
-                      <h3 class="font-login"> Hackathon</h3>
+                      <h3 class="font-login"><b style="font-size: 50px;margin-left:1em;"><span class="typed"></span></b></h3>
                     </br></br>
 
 
@@ -164,4 +164,7 @@
         </div>
     </div>
 </div> -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+ <script src="{{ asset('js/bienvenida.js') }}" ></script>
+
 @endsection
