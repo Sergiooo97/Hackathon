@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 class User extends Authenticatable
 {
+   
     use Notifiable;
 
     /**
@@ -60,7 +61,6 @@ class User extends Authenticatable
         }else{
             return false;
         }
-
 
     }
 

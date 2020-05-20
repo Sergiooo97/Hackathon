@@ -21,10 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 //Rutas para pagina de información de alumno
+//Route::model('User', 'App\User');
 Route::get('/infoAlumno', 'alumnoController@index')->name('infoAlumno');
 Route::post('/infoAlumno', 'alumnoController@store')->name('infoAlumno.store');
 route::get('/infoAlumno/{id}', 'alumnoController@show')
-->where('id','[0-9]+')
+//->where('id','[0-9]+')
 ->name('infoAlumno.show');
 //Rutas para pagina de registro
 Route::get('/registro', 'registroController@index')->name('registro');

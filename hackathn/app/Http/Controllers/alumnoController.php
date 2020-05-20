@@ -7,7 +7,7 @@ use App\avatarModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-
+use Illuminate\Support\Facades\Crypt;
 
 
 class alumnoController extends Controller
@@ -93,6 +93,7 @@ class alumnoController extends Controller
      */
     public function show($id)
     {
+        $id =  Crypt::decrypt(base64_decode($id)); 
         $user = User::find($id);
         if ($user==null){
  

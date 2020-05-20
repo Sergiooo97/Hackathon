@@ -93,9 +93,10 @@
                 <div style="padding:1em;" class="row">
 
                   <span>
+                  @livewire('proyecto-show')
+
                     @foreach($users as $user)
-                    <span><h3 style="text-align: center; font-size: 50px;">{{$user->proyectoName}} ⎙ <a href="#"  data-toggle="modal" data-target="#exampleModalLong"><i style="padding: 0.5em; width:70px;height:70px;" class="fa fa-pencil"></i></a> </h3></span>
-              
+
          
 
                     <h4>CANVA</h4>
@@ -122,9 +123,7 @@
                 <div class="card-body card_01 ">
                   <span  >
                     <h4 class="cat">Integrantes <a href="#"><i style="padding: 0.5em;" class="fa fa-pencil"></i></a></h4>
-                    <h6 class="cat2"><i class="nc-icon nc-single-02"></i>Sergio Eb Gallegos</h6>
-                    <h6  class="cat2"><i class="nc-icon nc-single-02"></i>Ulises Lizama Solis</h6>
-                    <h6  class="cat2"><i class="nc-icon nc-single-02"></i>Mauricio Poot Canul</h6>
+                    @livewire("miembros-list")
                   </span>
                 </div>
 

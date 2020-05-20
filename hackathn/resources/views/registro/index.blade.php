@@ -191,17 +191,17 @@ input {
                                           <div class="col-sm-6">
                                               <div class="form-group">
                                                 <label>Nombre<small>(obligatorio)</small></label>
-                                                <input name="name" type="text" class="input100" placeholder="Andrew...">
+                                                <input name="name" type="text" class="input100" placeholder="Andrew..." required maxlength="20">
                                               </div>
                                               <div class="form-group">
                                                 <label>Apellidos<small>(obligatorio)</small></label>
-                                                <input name="lastName" type="text" class="input100" placeholder="Smith...">
+                                                <input name="lastName" type="text" class="input100" placeholder="Smith..." required maxlength="20">
                                               </div>
                                           </div>
                                           <div class="col-sm-10 col-sm-offset-1">
                                               <div class="form-group">
                                                   <label>Correo <small>(obligatorio)</small></label>
-                                                  <input name="email" type="email" class="input100" placeholder="andrew@creative-tim.com">
+                                                  <input name="email" type="email" class="input100" placeholder="andrew@creative-tim.com" maxlength="30">
                                               </div>
                                               <script>
 
@@ -219,7 +219,7 @@ input {
 
                                               <div class="form-group">
                                                 <label>Matricula <small>(obligatorio)</small></label>
-                                                <input  onKeyPress="return soloNumeros(event)"  name="matricula" type="text" class="input100" placeholder="160700..">
+                                                <input  onKeyPress="return soloNumeros(event)"  name="matricula" type="text" class="input100" placeholder="160700.." maxlength="8" required>
                                             </div>
                                           </div>
                                       </div>
@@ -270,11 +270,11 @@ input {
                                                 <div class="form-group">
                                                  <div class="col-sm-9">
                                                     <label>Nombre de Equipo</label>
-                                                    <input name="equipoName" type="text" class="input100" placeholder="buena maravilla onda dinamita escuadrón lobo" required>
+                                                    <input name="equipoName" type="text" class="input100" placeholder="buena maravilla onda dinamita escuadrón lobo" required maxlength="20">
                                                   </div>
                                                   <div class="col-sm-3">
                                                     <label># equipo</label>
-                                                    <input name="equipoNumber" type="text" class="input100" placeholder="buena maravilla onda dinamita escuadrón lobo" required>
+                                                    <input onKeyPress="return soloNumeros(event)" name="equipoNumber" type="text" class="input100" placeholder="#" required maxlength="2">
                                                   </div>
                                                 </div>
                                             </div>

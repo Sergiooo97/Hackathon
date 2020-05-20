@@ -3,10 +3,6 @@
 @section('title', "información {$users->id}")
 @section('content')
 
-
-<h1>el usuaruo es {{$users->id}}</h1>
-
-
 <div class="content info-alumno-container">
     <div class="row">
       <div class="col-md-4">
@@ -20,7 +16,7 @@
              <a class="avatar2" data-toggle="modal" data-target="#exampleModal">
           
              
-              <img id="avatar" class="avatar border-gray " src="<?php echo  asset('/uploads/imagenes')?>/<?php echo $users->avatar ?>" alt="...">
+              <img id="avatar" class="avatar border-gray " src="{{$users->avatar}}" alt="...">
 
             
                
@@ -68,11 +64,8 @@
           </div>
 <!----------------------------inicio card body------------------------------------------>
           <div class="card-body">
-            <h3 style="font-size: 30px; color:#ffffff;">404 Not found</h3>
-          </br>
-          <h3 style="font-size: 20px; color:#ffffff;">Sección en mantenimiento :(</h3>
+            @livewire("miembros-list")
 
-          </div>
 
           <!----------------------------fin card body------------------------------------------>
         </div>
@@ -91,7 +84,7 @@
                     </div>
                   </div>
                   <div class="col-md-7 col-7">
-                    <h6 class="PROJ">Trip-On</h6>
+                    <h6 class="PROJ">@livewire("proyecto-show")</h6>
                     <br />
                     
                   </div>

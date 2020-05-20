@@ -47,7 +47,7 @@
                  <a class="avatar2" data-toggle="modal" data-target="#exampleModal">
               
                  
-                  <img id="avatar" class="avatar border-gray " src="<?php echo asset('/uploads/imagenes')?>/<?php echo auth()->user()->avatar?>" alt="...">
+                 <img id="avatar" class="avatar border-gray " src="{{auth()->user()->avatar}}" alt="...">
 
                 
                    
@@ -110,7 +110,7 @@
                       <div class="col-md-2 col-2 d-flex flex-row justify-content-center alig-items-center">
                         
                      <div class="avatar ">
-                     <img  src="<?php echo  asset('/uploads/imagenes')?>/<?php echo $user->avatar?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                     <img  src="{{$user->avatar}}" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                     
                         </div>
                      
@@ -121,7 +121,7 @@
                           <small class="rol">{{$user->rol}}</small>
                         </span>
                         <h6 class="title">
-                          <a href="{{route('infoAlumno.show',['id' => $user->id])}}">
+                          <a href="#">
                           {{ $user->name }}&nbsp;{{ $user->lastName}}</h6>
                           </a>
                         <br />
@@ -130,7 +130,7 @@
                       </div>
                      
                       <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon<"><a href="mauricio.html"><i class="nc-icon nc-single-02"></i></a></btn>
+                        <a href="{{route( 'infoAlumno.show',['id' => base64_encode(Crypt::encrypt($user->id))] ) }}">   <btn class="btn btn-sm btn-outline-success btn-round btn-icon<"><i class="nc-icon nc-single-02"></i></btn></a>
                       </div>
                     </div>
                     @endforeach
@@ -156,7 +156,10 @@
                         </div>
                       </div>
                       <div class="col-md-7 col-7">
-                        <h6 class="PROJ">{{ auth()->user()->proyectoName}}</h6>
+                        <h6 style="font-size:45px;" class="PROJ">@livewire("proyecto-show")</h6>
+
+                        
+
                         <br />
                         
                       </div>

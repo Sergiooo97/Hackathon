@@ -62,7 +62,7 @@ class registroController extends Controller
         $users->save();
              //redirigimos a usuarios              
       } catch (\Illuminate\Database\QueryException $e) {
-                return view('errors.23000');
+                return back();
       }   
 
     }

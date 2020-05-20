@@ -37,9 +37,9 @@
 
 var imagenes=new Array(
 
-    ['{{ asset('img/TecNNM.png') }}'],
+    ['{{ asset('img/TecNNM-min.png') }}'],
 
-    [' {{ asset('img/logo-tecmotul22.png') }}']
+    [' {{ asset('img/logo-tecmotul22-min.png') }}']
 
 );
 
@@ -99,7 +99,7 @@ font-size: 62px;
 font-family: 'Ruda';
 }
 body{
-  background-image: url(' {{ asset('loginAsset/images/isc_bg2.jpg') }}'); background-repeat: no-repeat; background-size: cover;
+  background-image: url(' {{ asset('loginAsset/images/isc_bg2-min.jpg') }}'); background-repeat: no-repeat; background-size: cover;
   background-attachment: fixed;
 }
 </style>

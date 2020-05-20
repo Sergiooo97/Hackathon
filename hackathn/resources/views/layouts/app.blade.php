@@ -252,7 +252,7 @@ font-family: 'Ruda';
 font-size: 16px;
 font-family: 'Ruda';
 }
-.PROJ{
+.PROJ>p{
   text-align: center;
   color: #ffffff;
 font-size: 46px;
@@ -324,8 +324,18 @@ transform:scale(1.1);
   margin-left: 4px;
   
 }
+.proyecto-proyecto>{
+  font-size: 55px;
+  color: #FFFFFF;
+}
+.active-on{
+  display: block;
+}
+.active-off{
+  display: none;
+}
 body{
-  background-image: url(' {{ asset('img/bg_app.jpg') }}'); background-repeat: no-repeat; background-size: cover;
+  background-image: url(' {{ asset('img/bg_app-min.jpg') }}'); background-repeat: no-repeat; background-size: cover;
   background-attachment: fixed;
 }
 
@@ -373,7 +383,6 @@ body{
                 <a href="{{route('proyecto')}}">
                   <i class="nc-icon nc-laptop"></i>
                   <p class="slider-label">Proyecto</p>
-                  <p class="proyecto">{{ auth()->user()->proyectoName}}</p>
                   <!-- <p class="proyecto">Trip-On</p> -->
                 </a>
               </li>

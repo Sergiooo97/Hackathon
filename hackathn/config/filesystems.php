@@ -58,6 +58,10 @@ return [
             'driver' => 'local',
             'root'   => public_path() . '/uploads',
         ],
+        'dropbox' => [
+            'driver' => 'dropbox',
+            'authorizationToken'   => env('DROPBOX_TOKEN')
+        ],
 
         's3' => [
             'driver' => 's3',
