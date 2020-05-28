@@ -1,5 +1,5 @@
 <div>
-    <ul class="list-unstyled team-members">
+    <ul style="margin-left:2em;" class="list-unstyled team-members">
                   
              
         <li>
@@ -19,7 +19,7 @@
               <span class="text-muted">
                 <small class="rol">{{$user->rol}}</small>
               </span>
-              <h6 class="title">
+              <h6 class="title ruda">
                 <a href="{{route('infoAlumno.show',['id' => base64_encode(Crypt::encrypt($user->id))])}}">
                 {{ $user->name }}&nbsp;{{ $user->lastName}}</h6>
                 </a>

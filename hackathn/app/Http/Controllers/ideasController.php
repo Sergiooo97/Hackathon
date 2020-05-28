@@ -46,6 +46,8 @@ class ideasController extends Controller
         $users = new idea();
         $users ->tituloIdea      = $request->input('tituloIdea');
         $users ->descripcion     = $request->input('descripcion');
+        $users ->tituloLink     = $request->input('link-name');
+        $users ->Link           = $request->input('link-text');
         $users ->userName        = auth()->user()->name;
         $users ->equipoNumber    = auth()->user()->equipoNumber;
         $users->save();

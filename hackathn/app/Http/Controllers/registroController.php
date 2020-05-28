@@ -54,15 +54,15 @@ class registroController extends Controller
         $users ->matricula  = $request->input('matricula');
         $users ->equipoName = $request->input('equipoName');
         $users ->equipoNumber = $request->input('equipoNumber');
-        $users ->email = $request->input('email');
+        $users ->email = $request->input('email').'@itsmotul.edu.mx';
         $users ->proyectoName = '404';
         $users ->lastName = $request->input('lastName');
         $users ->password = Hash::make($request->input('password'));
         $users->avatar= $avatar;
         $users->save();
-             //redirigimos a usuarios              
+        return redirect()->route('home');             //redirigimos a usuarios              
       } catch (\Illuminate\Database\QueryException $e) {
-                return back();
+        return view('errors.23000');
       }   
 
     }

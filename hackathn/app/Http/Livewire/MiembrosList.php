@@ -18,6 +18,7 @@ class MiembrosList extends Component
         
         $this->users=User::all()
         ->where('equipoNumber', '=', auth()->user()->equipoNumber);
+        //->WhereNotIn("id", [auth()->user()->id]);
         //->where('equipoNumber', '=', auth()->user()->equipoNumber);
         return view('livewire.miembros-list');
     }

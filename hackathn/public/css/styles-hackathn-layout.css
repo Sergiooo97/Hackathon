@@ -1,3 +1,98 @@
+.button-hackathn3{
+    border-radius: 10px;
+    border: solid 2px #2ed38b;
+    background: rgba(202, 202, 202, 0);
+    color: #ffffff;
+    width: auto;
+    height: 2.5em;
+    margin-top: 0.5em;
+  }
+  .button-hackathn3:hover{
+    border-radius: 10px;
+    border: solid 2px #2ed38b;
+    background: rgba(255, 255, 255, 0.226);
+    color: #ffffff;
+    width: auto;
+    height: 2.5em;
+    margin-top: 0.5em;
+  }
+  .ruda{
+  font-family: 'Ruda', sans-serif;
+  }
+.idea-card {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.info-alumno-container {
+  margin-left: 3em;
+}
+
+.proyecto-container {
+  margin-left: 6em;
+}
+
+.chat-card {
+  width: 80%;
+}
+
+.tec-m-logo {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+
+.btn-nav-hackathn {
+          display: none !important;
+
+    }
+  .drop-down-nav-hackathn {
+    display: none !important;
+  }
+
+  .chat-card {
+    width: 100%;
+  }
+
+  .proyecto-container {
+    margin-left: 0em;
+  }
+
+  .info-alumno-container {
+    margin-left: 0em;
+  }
+
+  .idea-card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tituloIdea {
+    margin-bottom: 10px;
+    height: 2em;
+  }
+
+  .enviar-idea {
+    margin-left: 3.8em;
+  }
+
+  .tec-m-logo {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .infoAlumno-no-movil {
+    display: none !important;
+  }
+
+  .logout-nav-movil {
+    display: none !important;
+
+  }
+}
+
 /*Ejemplo 1*/
 .avatar2 img {
     transition: all 0.2s linear;
@@ -139,28 +234,29 @@
   .card-title{
     color: #ffffff;
   font-size: 26px;
+  font-family: 'Ruda', sans-serif;
   }
   .miembros{
     color: #ffffff;
   font-size: 20px;
-  font-family: 'Ruda';
+  font-family: 'Ruda', sans-serif;
   }
   .miembroos{
     font-weight: bold;
     color: #ffffff;
   font-size: 20px;
-  font-family: 'Ruda';
+  font-family: 'Ruda', sans-serif;
   }
   .rol{
     color: #ffffff;
   font-size: 16px;
-  font-family: 'Ruda';
+  font-family: 'Ruda', sans-serif;
   }
   .PROJ{
     text-align: center;
     color: #ffffff;
   font-size: 46px;
-  font-family: 'Ruda';
+  font-family: 'Ruda', sans-serif;
   }
   .input-proyecto{
     border-radius: 10px;
@@ -180,7 +276,7 @@
   }
   .button-hackathn{
     border-radius: 10px;
-    border: solid 2px #51cbce;
+    border: solid 3px #51cbce;
     background: rgba(202, 202, 202, 0);
     color: #ffffff;
     width: 110px;
@@ -197,7 +293,7 @@
   }
   .button-hackathn2{
     border-radius: 10px;
-    border: solid 2px #51cbce;
+    border: solid 3px #51cbce;
     background: rgba(202, 202, 202, 0);
     color: #ffffff;
     width: 110px;
@@ -206,13 +302,15 @@
   }
   .button-hackathn:hover{
     border-radius: 10px;
-    border: solid 2px #51cbce;
+    border: solid 3px #51cbce;
     background: rgba(255, 255, 255, 0.226);
     color: #ffffff;
     width: 110px;
     height: 3em;
     margin-top: 0.5em;
   }
+ 
+  
   .card-idea:hover{
     -webkit-transform:scale(1.1);
   -moz-transform:scale(1.1);
@@ -226,3 +324,28 @@
     color: #FFFFFF;
     border-radius: 15px;
     margin-left: 4px;}
+    .proyecto-proyecto> {
+      font-size: 55px;
+      color: #FFFFFF;
+    }
+
+    .active-on {
+      display: block;
+    }
+
+    .active-off {
+      display: none;
+    }
+
+    .btn-nav-hackathn {
+      border-radius: 8px;
+      border: solid 1px #c0feff;
+      background: rgba(202, 202, 202, 0);
+      color: #ffffff;
+      
+
+    }
+
+    .drop-down-nav-hackathn {
+      margin-right: 2em;
+    }

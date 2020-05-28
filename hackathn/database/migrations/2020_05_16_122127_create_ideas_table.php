@@ -19,6 +19,9 @@ class CreateIdeasTable extends Migration
             $table->string('descripcion');
             $table->string('userName');
             $table->integer('equipoNumber');
+            $table->string('tituloLink')->nullable();
+            $table->string('link')->nullable();
+
             $table->timestamps();
         });
     }

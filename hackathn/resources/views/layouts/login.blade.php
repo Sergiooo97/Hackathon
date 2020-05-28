@@ -11,7 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+ <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
   <link href="{{ asset('loginAsset/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('loginAsset/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
   <link href="{{ asset('loginAsset/vendor/animate/animate.css') }}" rel="stylesheet">
@@ -93,6 +95,26 @@ onload=function()
 
 </script>
 <style>
+
+.tec-m-logo{
+      display: none;
+    }
+    .tec-m-logo-container{
+      display: none !important;
+    }
+@media screen and (max-width: 780px) {
+ 
+    .tec-m-logo{
+      display: block;
+      width: 100px;
+    }
+    .tec-m-logo-container{
+      display: block !;
+    }
+
+}
+
+
 .font-login{
 color: #ffffff;
 font-size: 62px;

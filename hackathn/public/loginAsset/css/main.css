@@ -401,6 +401,16 @@ height: 600px;
 .validate-input {
   position: relative;
 }
+.login100-form{
+  padding-top:5em;
+}
+@media screen and (max-width: 780px) {
+ 
+  .login100-form{
+    padding-top:1em;
+  }
+
+}
 
 .alert-validate::before {
   content: attr(data-validate);

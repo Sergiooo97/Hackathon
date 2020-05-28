@@ -22,8 +22,6 @@
   </div>
       
 
-
-
     <script>
 
         //El evento mensajeEnviado
@@ -39,3 +37,10 @@
 
     </script>
  
+
+
+
+   
+
+      
+

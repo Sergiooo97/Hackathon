@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Ruda&display=swap" rel="stylesheet"><!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ruda&display=swap" rel="stylesheet"> 
    <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
@@ -38,322 +39,148 @@
 
 
   <style>
-    .idea-card{
-      width: 90%; 
-      height:80%;
+  .cat{
+  font-size: 25px;
+  font-weight:bold;
+  font-family: 'Ruda', sans-serif;
+  }
+  .card_proy{
+width:80%;
+}
+   .button-hackathn3{
+    border-radius: 10px;
+    border: solid 2px #2ed38b;
+    background: rgba(202, 202, 202, 0);
+    color: #ffffff;
+
+    height: 3em;
+    margin-top: 0.4em;
+  }
+  .button-hackathn3:hover{
+    border-radius: 10px;
+    border: solid 2px #2ed38b;
+    background: rgba(255, 255, 255, 0.226);
+    color: #ffffff;
+
+    height: 3em;
+    margin-top: 0.5em;
+  }
+  .btn-nav-hackathn {
+      border-radius: 8px;
+      border: solid 1px #c0feff;
+      background: rgba(202, 202, 202, 0);
+      color: #ffffff;
+      
+
     }
-    .info-alumno-container{
-      margin-left:3em;
+
+    .drop-down-nav-hackathn {
+      margin-right: 2em;
     }
-    .proyecto-container{
-      margin-left: 6em;
+    @media screen and (max-width: 1100px) {
+
+.card_proy{
+width:100%;
+}
+.btn-nav-hackathn {
+          display: none !important;
+
     }
-    .chat-card{
-      width: 80%;
-    }
-@media screen and (max-width: 700px) {
-  .chat-card{
-      width: 100%;
-    }
-    .proyecto-container{
-      margin-left: 0em;
-    }
-    .info-alumno-container{
-      margin-left:0em;
-    }
-    .idea-card{
-      width: 100%; 
-      height:100%;
-    }
-
-    .tituloIdea{
-      margin-bottom:10px;
-      height: 2em;
-    }
-    .enviar-idea{
-      margin-left: 3.8em;
-    }
-
-}
-
-
-/*Ejemplo 1*/
-.avatar2 img {
-transition: all 0.2s linear;
-}
-.avatar2 .mascara {
-opacity: 0;
-background-color: rgba(46,157,120, 0.7);
-transition: all 0.3s ease-in-out;
-}
-.avatar2 h2 {
-transform: translateX(-200px);/*Desplazamos a la izquierda*/
-opacity: 0;
-transition: all 0.7s ease-in-out;
-}
-.avatar2 p {
-transform: translateX(200px);/*Desplazamos a la derecha*/
-opacity: 0;
-transition: all 0.4s linear;
-}
-.avatar2 a.link{
-opacity: 0;
-transition: all 0.4s ease-in-out;
-transform: translateY(100px)/*Desplazamos para abajo*/
-}
-.avatar2:hover img {
-transform: scale(1.1);/*Damos un ligero zoom a la imagen*/
-}
-.avatar2:hover .mascara {
-opacity: 1;
-}
-.avatar2:hover h2,
-.avatar2:hover p,
-.avatar2:hover a.link {
-opacity: 1;
-transform: translateX(0px);/*Regresamos a las posiciones originales*/
-}
-.avatar2:hover p {
-transition-delay: 0.1s;
-}
-.avatar2:hover a.link {
-transition-delay: 0.2s; /*Aplicamos un pequeño retardo para que se muestre al final*/
-transform: translateY(0px);
-}
-
-
-
-
-
-
-
-
-  .logos{
-    background:#043c5c;
-   }
-   .logos>a{
-   color: #ffffff;
-   }
-   @font-face {
-  font-family: "Northern";
-  src: url("../fonts/NorthernTerritories.ttf") format("truetype");
+  .drop-down-nav-hackathn {
+    display: none !important;
   }
 
-  .titleceneae{
-                font-family:Northern;
-                font-size: 30px
-              }
-     .font-natacad{
-      font-family:Northern;
+  .chat-card {
+    width: 100%;
+  }
 
-      }
-.card .card-footer {
-  margin-top: 1em;
-  border: 0;
-}
-.card{
-  background:rgba(2, 35, 54, 0.7);
-}
+  .proyecto-container {
+    margin-left: 0em;
+  }
 
- .logos>a{
- color: #ffffff;
- }
+  .info-alumno-container {
+    margin-left: 0em;
+  }
 
-.logos{
-  background:rgba(2, 35, 54, 1.0);
-  color: #ffffff;
-}
+  .idea-card {
+    width: 100%;
+    height: 90%;
+  }
 
-.slider-label{
-  color:rgb(202, 202, 202);
-  font-size: 16px;
-  font-family: 'Ruda';
-}
+  .tituloIdea {
+    margin-bottom: 10px;
+    height: 2em;
+    font-family: 'Ruda', sans-serif;
+  }
 
+  .enviar-idea {
+    margin-left: 3.8em;
+  }
 
-
-li.active > a> p {
-  color: #ffffff;
-
-
-}
-
-li.active > a {
-  color: #ffffff;
-  opacity: 1;
-  background:rgb(7, 33, 51);
-  border-radius: 5px;
-  font-size: 18px;
-  font-family: 'Ruda';
-
-}
-
-.sidebar[data-active-color="danger"] .nav li.active>a,
-.sidebar[data-active-color="danger"] .nav li.active>a i,
-.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"],
-.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"] i,
-.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active .sidebar-mini-icon,
-.sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active>a,
-.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a,
-.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a i,
-.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"],
-.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"] i,
-.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active .sidebar-mini-icon,
-.off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active>a {
-  color: #FFFFFF;
-  opacity: 1;
-  font-size: 16px;
-  font-family: 'Ruda';
-}
-.proyecto{
-  text-align: center;
-  font-size: 22px;
-}
-.card_01{
- padding:2em;
-  background:rgba(3, 46, 71, 0.7);
-   border-radius:15px;
-   color: #ffffff;
-}
-.card_001{
- padding:2em;
-  background:rgba(3, 46, 71, 0.931);
-   border-radius:15px;
-   color: #ffffff;
-}
-.sidebar{
-  background:rgba(3, 46, 71, 0.7);
-
-}
-.main-panel{
-
-background: rgba(0, 0, 0, 0);
-}
-.descriptioon{color: #ffffff;
-font-size: 18px;
-}
-.card-title{
-  color: #ffffff;
-font-size: 26px;
-}
-.miembros{
-  color: #ffffff;
-font-size: 20px;
-font-family: 'Ruda';
-}
-.miembroos{
-  font-weight: bold;
-  color: #ffffff;
-font-size: 20px;
-font-family: 'Ruda';
-}
-.rol{
-  color: #ffffff;
-font-size: 16px;
-font-family: 'Ruda';
-}
-.PROJ>p{
-  text-align: center;
-  color: #ffffff;
-font-size: 46px;
-font-family: 'Ruda';
-}
-.input-proyecto{
-  border-radius: 10px;
-  background: rgba(2, 35, 54, 0.7);
-  border: solid 1px #ffffff;
-  color: #ffffff;
-  width: 100%;
-}
-.scroll {
-    max-height: 65%;
-    overflow-y: auto;
-}
-.scroll-chat-list {
-  height: 225px;
-    max-height: 225px;
-    overflow-y: auto;
-}
-.button-hackathn{
-  border-radius: 10px;
-  border: solid 2px #51cbce;
-  background: rgba(202, 202, 202, 0);
-  color: #ffffff;
-  width: 110px;
-  height: 3em;
-  margin-top: 0.7em;
-}
-.input-proyecto2{
-  border-radius: 10px;
-  background: rgba(2, 35, 54, 0.7);
-  border: solid 1px #ffffff;
-  color: #ffffff;
-  width: 100%;
-  height: 35px;
-}
-.button-hackathn2{
-  border-radius: 10px;
-  border: solid 2px #51cbce;
-  background: rgba(202, 202, 202, 0);
-  color: #ffffff;
-  width: 110px;
-  height: 2.5em;
-  margin-top: 0.5em;
-}
-.button-hackathn:hover{
-  border-radius: 10px;
-  border: solid 2px #51cbce;
-  background: rgba(255, 255, 255, 0.226);
-  color: #ffffff;
-  width: 110px;
-  height: 3em;
-  margin-top: 0.5em;
-}
-.card-idea:hover{
-  -webkit-transform:scale(1.1);
--moz-transform:scale(1.1);
--ms-transform:scale(1.1);
--o-transform:scale(1.1);
-transform:scale(1.1);
-}
-.alert-hackathn{
-  position: absolute; 
-  background:rgba(0, 110, 153, 0.602);
-  color: #FFFFFF;
-  border-radius: 15px;
-  margin-left: 4px;
+  .tec-m-logo {
+    display: block;
+  }
+  .col-idea{
   
-}
-.proyecto-proyecto>{
-  font-size: 55px;
-  color: #FFFFFF;
-}
-.active-on{
-  display: block;
-}
-.active-off{
-  display: none;
-}
-body{
-  background-image: url(' {{ asset('img/bg_app-min.jpg') }}'); background-repeat: no-repeat; background-size: cover;
-  background-attachment: fixed;
+  margin-left: 3.5em;
+  } 
+
 }
 
+@media screen and (min-width: 1000px) {
+  .infoAlumno-no-movil {
+    display: none !important;
+  }
 
+  .logout-nav-movil {
+    display: none !important;
 
+  }
+}
 
+    .sidebar[data-active-color="danger"] .nav li.active>a,
+    .sidebar[data-active-color="danger"] .nav li.active>a i,
+    .sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"],
+    .sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"] i,
+    .sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active .sidebar-mini-icon,
+    .sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active>a,
+    .off-canvas-sidebar[data-active-color="danger"] .nav li.active>a,
+    .off-canvas-sidebar[data-active-color="danger"] .nav li.active>a i,
+    .off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"],
+    .off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"] i,
+    .off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active .sidebar-mini-icon,
+    .off-canvas-sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"]~div>ul>li.active>a {
+      color: #FFFFFF;
+      opacity: 1;
+    
+    }
 
-   </style>
-      
-      <livewire:styles>
-        <livewire:scripts>
+    body {
+      background-image: url(' {{ asset('img/bg_app-min.jpg') }}');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+
+     
+     @livewireStyles
+     
+     @livewireScripts
+     
+     <script>
+          function scroll(){
+            $("#scroll").animate({ scrollTop: $('#scroll')[0].scrollHeight}, "fast");
+          }
+        </script>
+        
 </head>
-<body>
+<body onload="scroll()">
     <div class="wrapper ">
         <div class="sidebar"  data-active-color="danger">
 
           <div class="logo logos">
-            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+            <a href="http://www.itsmotul.edu.mx/" class="simple-text logo-mini">
               <div class="logo-image-large">
                 <img src="{{ asset('img/TecNNM.png') }}" width="100px">
               </div>
@@ -371,11 +198,11 @@ body{
                   <p class="slider-label">Inicio</p>
                 </a>
               </li>
-              <li class="{{ request()->is('infoAlumno') ? 'active' : '' }}">
+             <!--- <li class="{{ request()->is('infoAlumno') ? 'active' : '' }}">
                 <a href="{{route('infoAlumno')}}">
                   <i class="nc-icon nc-single-02"></i>
                   <p class="slider-label">Perfil </p>
-                  <p class="proyecto">{{ auth()->user()->name}}</p>
+                  <p class="proyecto">{{ auth()->user()->name}}</p> --->
 
                 </a>
               </li>
@@ -396,22 +223,70 @@ body{
               <li class="{{ request()->is('chat') ? 'active' : '' }}">
                 <a href="{{route('chat')}}">
                   <i class="nc-icon nc-chat-33"></i>
+
                   <p class="slider-label">chat</p>
                   <!-- <p class="proyecto">Trip-On</p> -->
                 </a>
               </li>
+             <!----- <li class="{{ request()->is('chat') ? 'active' : '' }}">
+                <a href="{{route('chat')}}">
+                  <div class="card-miembros-side">
+                  <i class="nc-icon nc-chat-33"></i>
+                  <p class="slider-label">compañeros</p>
+                  <div class="container">
+                  livewire("miembros") 
+                </div>     
+                </div>
+                </a>
 
+                </li> --->
+                <div class="collapse navbar-collapse " id="example-navbar-profile">
+                  <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item">
+                      <a class="nav-link" href="#pablo">
+                        <i class="now-ui-icons users_circle-08"></i>
+                        <p>Profile</p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown nav-item-image">
+                      <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                        <div class="">
+                          <img src="assets/img/avatar.jpg" alt="">
+                        </div>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-header">Dropdown header</a>
+                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                       
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              
+              
+  <li class="infoAlumno-no-movil {{ request()->is('infoAlumno') ? 'active' : '' }}">
+                <a href="{{route('infoAlumno')}}">
+                  <i class="nc-icon nc-single-02"></i>
+                  <p class="slider-label">Perfil </p>
+                  <p class="proyecto">{{ auth()->user()->name}}</p> 
+
+                </a>
+              </li>
 
 
             </ul>
+            
+
           </div>
+
         </div>
         <div class="main-panel">
           <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg navbar-absolute fixed-top  logos">
-            <div class="container-fluid">
-              <div class="navbar-wrapper">
-                <div class="navbar-toggle">
+           <nav class="navbar navbar-expand-lg navbar-absolute fixed-top  logos">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
                   <button type="button" class="navbar-toggler">
                     <span class="navbar-toggler-bar bar1"></span>
                     <span class="navbar-toggler-bar bar2"></span>
@@ -421,12 +296,36 @@ body{
                 <a class="navbar-brand" href="#pablo"> 
                   Hackathon 2020
                </a>
-                <a href="{{ url('/logout') }}"> cerrar sesión </a>
+                <a > </a>
               </div>
-             
-             
+          <a class="logout-nav-movil" href="{{ url('/logout') }}">Cerrar sesión</a>
+
+
+          </div>
+          <!-- Split dropleft button -->
+          <!-- Split dropleft button -->
+        <div class="btn-group drop-down-nav-hackathn">
+          <div class="btn-group dropleft" role="group">
+            <button type="button" class=" btn-nav-hackathn  dropdown-toggle dropdown-toggle-split"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropleft</span>
+            </button>
+            <div class="dropdown-menu col-sm-12">
+              <!-- Dropdown menu links -->
+              <a class="dropdown-item pc" href="{{ url('/infoAlumno') }}">Ver perfil</a>
+              <a class="dropdown-item pc" href="{{ url('/logout') }}">Cerrar Seión</a>
             </div>
-          </nav>
+          </div>
+          <button type="button" class="btn-nav-hackathn col-lg-12">
+
+            <a href="{{route('infoAlumno')}}">
+              <p>{{auth()->user()->name}}</p>
+            </a>
+          </button></a>
+        </div>
+
+
+      </nav>
           <!-- End Navbar -->
           <!-- <div class="panel-header panel-header-lg">
 
@@ -442,3 +341,4 @@ body{
 
 </body>
 </html>
+

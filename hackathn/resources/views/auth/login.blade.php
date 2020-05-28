@@ -10,7 +10,7 @@
                 <div class="login100-pic js-tilt " data-tilt>
                     <div class="notificationss bounceInDown">
 
-                    <a href="" id="link"><img src="" id="imagen"></a>
+                    <a href="" id="link"><img  src="" id="imagen"></a>
                         </br>
                         </br>
 
@@ -31,14 +31,44 @@
                 </div>
 
 
-                <form style="padding-top:5em;" class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+                <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
                     @csrf
                 <span class="login100-form-title">
                         Iniciar sesión
                     </span>
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input id="email" class="input100 @error('email') is-invalid @enderror" type="email" name="email" placeholder="Correo Institucional" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <div class="wrap-input100 validate-input" >
+                        <input id="email" class="input100" type="text" name="email" placeholder="nombre.16070021" value="{{ old('email') }}" required autocomplete="off" >
+
+                        
+                    <script>
+                       /*     $( document ).ready(function() {
+    $('input').attr('autocomplete','off');
+});
+                        
+                     $( "#email" ).blur(function() {
+                                    var ta      =   $("#email");
+                                    letras      =   ta.val().concat("@itsmotul.edu.mx");
+                                    ta.val(letras)
+      // tu codigo ajax va dentro de esta function...
+    });
+          $( "#email" ).focus(function() {
+                                    var ta      =   $("#email");
+                                    letras      =   ta.val().slice(0, -16);
+                                   // texto.value = texto.value.substring(0, texto.value.length - 1);
+                                    ta.val(letras)
+      // tu codigo ajax va dentro de esta function...
+    }); */
+                        </script>
+                           <script>
+                            $("#email").keyup(function(){              
+                                    var ta      =   $("#email");
+                                    letras      =   ta.val().replace(/ /g, "");
+                                    ta.val(letras)
+                            }); 
+                          
+    
+                        </script>
                         @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -51,7 +81,15 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input id="password" class="input100 @error('password') is-invalid @enderror" type="password" name="password"  placeholder="Contraseña" required autocomplete="current-password" >
+                        <input id="password" class="input100 @error('password') is-invalid @enderror" type="password" name="password"  placeholder="Contraseña"  autocomplete="off" required>
+                          <script>
+                            $("#password").keyup(function(){              
+                                    var ta      =   $("#password");
+                                    letras      =   ta.val().replace(/ /g, "");
+                                    ta.val(letras)
+                            }); 
+    
+                        </script>
                         @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

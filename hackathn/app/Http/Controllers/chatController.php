@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use App\Chat; 
 
 class chatController extends Controller
 {
@@ -43,7 +44,16 @@ class chatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $users = new Chat();
+        $users ->usuario      = auth()->user()->name;
+        $users ->equipoNumber     = auth()->user()->equipoNumber;
+        $users ->id_re        = auth()->user()->id;
+        $users ->id_env    = auth()->user()->id;
+        $users ->avatar    = auth()->user()->avatar;
+        $users ->mensaje      = $request->input('mensaje');
+        $users->save();
+         return back();
     }
 
     /**

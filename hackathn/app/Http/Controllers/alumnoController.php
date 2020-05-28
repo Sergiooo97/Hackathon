@@ -93,6 +93,7 @@ class alumnoController extends Controller
      */
     public function show($id)
     {
+       
         $id =  Crypt::decrypt(base64_decode($id)); 
         $user = User::find($id);
         if ($user==null){
